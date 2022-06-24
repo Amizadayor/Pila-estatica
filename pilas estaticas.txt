@@ -1,0 +1,111 @@
+//Pilas estaticas//
+
+
+//Creación de la clase Pila//
+
+public class Pila{
+   int [] vectorPila;
+   int cima;
+                          //constructor
+
+   public Pila(int tamanio){
+    vectorPila = new int[tamanio];
+    cima = -1;
+   }
+                                          //Metodo insertar //
+   public  void insertar(int dato){
+    cima++;
+    vectorPila[cima]=dato;
+
+   }
+                                        //Metodo eliminar
+   public int sacar(){
+     int fuera=vectorPila[cima];
+     cima--;
+     return fuera;
+   }
+                                   // Metodo para saber si la pila esta vacia//
+
+   public boolean estaVacia(){
+      if (cima == -1){
+          return true;
+      }else{
+          return false;
+      }
+   }
+                                   //Metodo para saber cuando la pila esta llena//
+   public boolean estaLlena(){
+      if(vectorPila.length-1==cima;){
+          return true;
+      }else{
+          return false;
+      }
+   
+  }
+                                      //Metodo para saber que elemento se encuentra en la cima//
+   public int cimaPila(){
+      return vectorPila[cima];
+
+  }
+                                  // metodo para saber el tamaño de la pila//
+  public int tamanioPila(){
+   return.vectorPila.length;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//       clase principal        //
+
+
+
+
+
+
+
+public class Main{
+  
+   public static void main(String [] args){
+     Pila p = new Pila(5);
+  
+    p.Push(1);
+    System.out.println(p.StatckTop());
+    p.Push(2);
+    System.out.println(p.StatckTop());
+    p.Push(3);
+    System.out.println(p.StatckTop());
+    p.Push(4);
+    System.out.println(p.StatckTop()); 
+    p.Push(5);
+    System.out.println(p.StatckTop());
+    System.out.println(" LA PILA ESTA VACIA " + p.Empty());
+    System.out.println(" LA PILA ESTA LLENA " + p.Full());
+    if(!p.Empty())
+    p.Pop();
+  }
+}
+
+
+
+
+
+
+
+
+
+
